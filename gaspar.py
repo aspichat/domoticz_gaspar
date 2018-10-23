@@ -81,7 +81,7 @@ def login(username, password):
     session.headers = {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Mobile Safari/537.36',
                 'Accept-Language':'fr,fr-FR;q=0.8,en;q=0.6',
-                'Accept-Encoding':'gzip, deflate, br', 
+                'Accept-Encoding':'gzip, deflate, br',
                 'Accept':'application/xml, application/json, text/javascript, */*; q=0.01',
                 'Faces-Request':'partial/ajax',
                 'Origin':'https://monespace.grdf.fr',
@@ -90,7 +90,7 @@ def login(username, password):
     session.cookies['KPISavedRef'] ='https://monespace.grdf.fr/monespace/connexion'
 
     session.get(LOGIN_BASE_URI + API_ENDPOINT_LOGIN, data=payload, allow_redirects=False)
-    
+
     req = session.post(LOGIN_BASE_URI + API_ENDPOINT_LOGIN, data=payload, allow_redirects=False)
 
     javaxvs=parse_lxml(req.text)
@@ -151,7 +151,7 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
     session.headers = {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Mobile Safari/537.36',
                 'Accept-Language':'fr,fr-FR;q=0.8,en;q=0.6',
-                'Accept-Encoding':'gzip, deflate, br', 
+                'Accept-Encoding':'gzip, deflate, br',
                 'Accept':'application/xml, application/json, text/javascript, */*; q=0.01',
                 'Faces-Request':'partial/ajax',
                 'Origin':'https://monespace.grdf.fr',
@@ -160,8 +160,8 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
 
     payload = {
                 'javax.faces.partial.ajax':'true',
-                'javax.faces.source':'_eConsosynthese_WAR_eConsoportlet_:j_idt5:j_idt121',
-                'javax.faces.partial.execute':'_eConsosynthese_WAR_eConsoportlet_:j_idt5:j_idt121',
+                'javax.faces.source':'_eConsosynthese_WAR_eConsoportlet_:j_idt5:j_idt43',
+                'javax.faces.partial.execute':'_eConsosynthese_WAR_eConsoportlet_:j_idt5:j_idt43',
                 'javax.faces.partial.render':'_eConsosynthese_WAR_eConsoportlet_:j_idt5',
                 'javax.faces.behavior.event':'click',
                 'javax.faces.partial.event':'click',
@@ -202,8 +202,8 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
     #Step 1
     payload = {
                'javax.faces.partial.ajax':'true',
-               'javax.faces.source':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt106',
-               'javax.faces.partial.execute':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt106',
+               'javax.faces.source':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt112',
+               'javax.faces.partial.execute':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt112',
                'javax.faces.partial.render':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille',
                'javax.faces.behavior.event':'click',
                'javax.faces.partial.event':'click',
@@ -241,7 +241,7 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
                'javax.faces.partial.ajax':'true',
                'javax.faces.source':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:panelTypeGranularite1:2',
                'javax.faces.partial.execute':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:panelTypeGranularite1',
-               'javax.faces.partial.render':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:refreshHighchart _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:updateDatesBean _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:boutonTelechargerDonnees _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:panelTypeGranularite _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:idBlocSeuilParametrage',
+               'javax.faces.partial.render':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:refreshHighchart _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:updateDatesBean _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:boutonTelechargerDonnees _eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:panelTypeGranularite1_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:idBlocSeuilParametrage',
                'javax.faces.behavior.event':'valueChange',
                'javax.faces.partial.event':'change',
                '_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille',
@@ -300,11 +300,11 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
         if ds[i]!="null":
             #data[ts[i].replace('Le ','')] = ds[i]
             data.append({'conso':ds[i], 'time':ts[i].replace('Le ','')})
-            
+
         i +=1
     json_data = json.dumps(data)
 
- 
+
 
     #if 300 <= req.status_code < 400:
     #   # So... apparently, we may need to do that once again if we hit a 302
