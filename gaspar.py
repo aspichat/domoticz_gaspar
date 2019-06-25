@@ -202,8 +202,8 @@ def _get_data(session, resource_id, start_date=None, end_date=None):
     #Step 1
     payload = {
                'javax.faces.partial.ajax':'true',
-               'javax.faces.source':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt113',
-               'javax.faces.partial.execute':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt113',
+               'javax.faces.source':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt139',
+               'javax.faces.partial.execute':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille:j_idt139',
                'javax.faces.partial.render':'_eConsoconsoDetaille_WAR_eConsoportlet_:idFormConsoDetaille',
                'javax.faces.behavior.event':'click',
                'javax.faces.partial.event':'click',
